@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #3b075e, #100020);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    color: gold;
+    text-shadow: 0 0 10px orange,
+                 0 0 25px yellow,
+                 0 0 50px red;
+    animation: glow 1.5s infinite alternate;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #ffcc66;
+    font-size: 30px;
+}
+
+.container p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.diya {
+    font-size: 90px;
+    margin: 25px;
+    animation: diyaGlow 1s infinite alternate;
+}
+
+button {
+    padding: 13px 25px;
+    background: linear-gradient(45deg, orange, gold);
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #4b1600;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+
+.footer {
+    color: pink;
+    font-size: 14px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px orange;
+    }
+    to {
+        text-shadow: 0 0 30px yellow,
+                     0 0 60px orange;
+    }
+}
+
+@keyframes diyaGlow {
+    from {
+        filter: drop-shadow(0 0 5px orange);
+    }
+    to {
+        filter: drop-shadow(0 0 30px gold);
+    }
+}
